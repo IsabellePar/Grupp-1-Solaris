@@ -1,17 +1,21 @@
+
+
 //function Andrej, Arbnor
 async function fetchAllPlanets() {
-    
-    let resp = await fetch('https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies', {
-        method: 'GET',
-        headers: {'x-zocom': `${apiKey.key}`}
-    });
-    
-    let data = await resp.json();
-    
-   // console.log(data.bodies);
-
-    localStorage.setItem("data", JSON.stringify(data.bodies));
-    
+    try {
+        let resp = await fetch('https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies', {
+            method: 'GET',
+            headers: {'x-zocom': `${apiKey.key}`}
+        });
+        
+        let data = await resp.json();
+        
+        localStorage.setItem("data", JSON.stringify(data.bodies));
+        
+    } catch (error) {
+        console.log(error)
+    }
+   
 };
 
 // Alla: byt namn när man hovrar över planeten
@@ -35,6 +39,8 @@ function setEventsOnPlanets(){
         
         planet.addEventListener("click", () => {
             setActivePlanet(solarSystem[planet.id]);
+            window.location.href = "singlePage.html";
+            history.forward();
         })
     }
 }
