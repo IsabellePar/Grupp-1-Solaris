@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+
+}
+
+body {
+    background: linear-gradient(to right, rgb(14, 14, 112), black);
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    text-align: end;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .dot {
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+
+        &:nth-of-type(1) {width: 20vw; background-color: rgb(255, 217, 0);}
+        &:nth-of-type(2) {width: 1vw; background-color: grey}
+        &:nth-of-type(3) {width: 2vw; background-color: pink}
+        &:nth-of-type(4) {width: 5vw; background-color: rgb(65, 143, 233)}
+        &:nth-of-type(5) {width: 3vw; background-color: rgb(248, 70, 70)}
+        &:nth-of-type(6) {width: 10vw; background-color: sandybrown}
+        &:nth-of-type(7) {width: 8vw; background-color: rgb(212, 198, 131); position: relative}
+        &:nth-of-type(8) {width: 5vw; background-color: lightblue}
+        &:nth-of-type(9) {width: 4vw; background-color: rgb(137, 179, 218)}
+    
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12vw;
+            height: 5px;
+            background-color: rgb(241, 238, 219);
+            border-radius: 100%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    
+}

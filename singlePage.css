@@ -1,0 +1,35 @@
+/* Isabelle: Styling av home-sidan */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.container{
+  background: linear-gradient(to right, rgb(16, 16, 86), rgb(21, 18, 24) );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
+
+header {
+  text-align: end;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+}
