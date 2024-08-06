@@ -1,7 +1,8 @@
 * {
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
+  color:white;
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -9,34 +10,39 @@
 }
 
 body {
-  background: linear-gradient(to right, rgb(16, 16, 86), rgb(21, 18, 24) );
+   background: linear-gradient(to right, rgb(16, 16, 86), rgb(21, 18, 24) ); 
   /* background-image: url('https://github.com/Lexicon-Frontend-2024/exercise-js-solaris/blob/main/assets/star-transparent.png?raw=true');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; */
-  color: white;
-  height: 100vh;
+height: 100vh;
 }
 
 header {
+  height: 10vh;
   display: flex;
-  flex-direction: row;
-  height: 5vh;
-  gap: 1vw;
   align-items: center;
-  padding-left: 5vw;
-  
+  gap: 1rem;
   background-color: rgba(0, 0, 0, 0.247);
   a {
     font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
   }
 }
 
 .container{
   width: 100%;
-  height: 100%;
+  height: 85%;
+  grid-column: 2 / 4;
+}
+
+.main-content {
   display: grid;
+  height: 95%;
   grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: 1fr 1fr; */
 }
 
 .my_aside {
@@ -49,7 +55,7 @@ header {
   * {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background-color: rgba(0, 255, 255);
+    /* background-color: rgba(0, 255, 255); */
     z-index: 1;
     left: -110vh;
     position: absolute;
@@ -59,19 +65,15 @@ header {
     &:nth-of-type(3) {height: 130vh; opacity: 10%}
   }
 }
-     
-      main {
-        grid-column: 2 / 4;
-      }
-      
-      .factContainer {
-        border-top: 1px solid #FFFFFF33;
-        border-bottom: 1px solid #FFFFFF33;
-      }
-      
-      footer {
-        text-align: center;
-      }
+
+.factContainer {
+  border-top: 1px solid #FFFFFF33;
+  border-bottom: 1px solid #FFFFFF33;
+}
+
+footer {
+  text-align: center;
+}
 
       
 .main_single_page_section{
@@ -91,6 +93,46 @@ header {
 }
 
 .factContainer{
-  display: grid
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "first second"
+                        "third fourth"
+                        "fifth sixth"
+                         "seven eight";
 }
 
+.omkrets{
+  grid-area: first;
+}
+.km_{
+  grid-area:second ;
+}
+.answer_omkrets{
+  grid-area: third;
+}
+.answer_km{
+  grid-area: fourth;
+}
+.max_temperatur{
+  grid-area: fifth;
+}
+.min_temp{
+  grid-area: sixth;
+}
+
+.answer_max_temperatur{
+  grid-area: seven;
+  margin-bottom: 2em;
+}
+.answer_min_temp{
+  grid-area: eight;
+
+}
+
+.info_for_text h3{
+  margin-top: 1em;
+}
+
+/* footer{
+  padding-bottom: 2em;
+} */

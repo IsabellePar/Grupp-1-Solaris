@@ -10,18 +10,33 @@ async function fetchAllPlanets() {
         
         let data = await resp.json();
         
-        localStorage.setItem("data", JSON.stringify(data.bodies));
+        let planets = data.bodies;
         
+
+        for(let i = 0; i<=8; i++){
+            planets[i].color = setPlanetColors(i);
+        }
+        localStorage.setItem("data", JSON.stringify(planets));
+        console.log(planets);
     } catch (error) {
         console.log(error)
     }
    
 };
 
+function setPlanetColors(planetId){
+    let colorArray = ["#ffd900", "#808080", "#ffc0cb", "#418fe9", "#f84646", "#f4a460", "#d4c683", "#add8e6", "#89b3da"];
+
+    return colorArray[planetId];
+}
+
 // Alla: byt namn när man hovrar över planeten
 function setEventsOnPlanets(){
     
-    let planets = document.querySelectorAll(".dot");
+     let planets = document.querySelectorAll(".dot");
+    // planets.forEach((planet, index)) => {
+    //     planet.style.backgroundColor = setPlanetColors(index);
+    // })
 
     let solarSystem = JSON.parse(localStorage.getItem("data"));
     console.log(solarSystem);

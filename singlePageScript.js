@@ -27,6 +27,8 @@ function displayPlanet() {
     let moonsCount = document.querySelector(".moons");
     let joined = planetInfo.moons.join(", ");
     moonsCount.textContent = joined;
+    let circle = document.querySelectorAll(".my_aside > *");
+    circle.forEach(c => {c.style.backgroundColor = planetInfo.color});
   }
 
 displayPlanet();
