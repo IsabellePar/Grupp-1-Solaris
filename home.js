@@ -34,9 +34,6 @@ function setPlanetColors(planetId){
 function setEventsOnPlanets(){
     
      let planets = document.querySelectorAll(".dot");
-    // planets.forEach((planet, index)) => {
-    //     planet.style.backgroundColor = setPlanetColors(index);
-    // })
 
     let solarSystem = JSON.parse(localStorage.getItem("data"));
     console.log(solarSystem);

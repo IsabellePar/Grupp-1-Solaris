@@ -1,3 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Secular+One&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -10,19 +13,27 @@
 }
 
 body {
-   background: linear-gradient(to right, rgb(16, 16, 86), rgb(21, 18, 24) ); 
-  /* background-image: url('https://github.com/Lexicon-Frontend-2024/exercise-js-solaris/blob/main/assets/star-transparent.png?raw=true');
+  min-width: 980px;
+  background: url('assets/star-transparent.png'), linear-gradient(to right, rgb(16, 16, 86), rgb(21, 18, 24) ); 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; */
-height: 100vh;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
   height: 10vh;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
   gap: 1rem;
+  z-index: 5;
+  padding-left: 5vw;
   background-color: rgba(0, 0, 0, 0.247);
   a {
     font-size: 25px;
@@ -34,14 +45,15 @@ header {
 
 .container{
   width: 100%;
-  height: 85%;
+  /* height: 85%; */
   grid-column: 2 / 4;
 }
 
 .main-content {
   display: grid;
-  height: 95%;
+  /* height: 95%; */
   grid-template-columns: repeat(4, 1fr);
+  align-items: center;
   /* grid-template-columns: 1fr 1fr; */
 }
 
@@ -50,15 +62,16 @@ header {
   overflow: hidden;
   display: grid;
   place-items: center;
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
   
   * {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    /* background-color: rgba(0, 255, 255); */
     z-index: 1;
     left: -110vh;
-    position: absolute;
+    position: fixed;
     
     &:nth-of-type(1) {height: 120vh; opacity: 100%}
     &:nth-of-type(2) {height: 125vh; opacity: 10%}
@@ -79,17 +92,37 @@ footer {
 .main_single_page_section{
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
 }
 
 .text_for_planet{
   margin-top: 1em;
-  color: yellow;
+  color: #FFD029;
+  font-family: "Lora";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.6em;
+  text-align: left;
+}
+
+.article_for_text > h2 {
+  font-family: "Secular One";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0.09em;
+  text-align: left;
 }
 
 .info_for_text p{
   margin-top: 1em;
   margin-bottom: 1em;
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30.6px;
+  text-align: left;
 }
 
 .factContainer{
@@ -99,6 +132,24 @@ footer {
                         "third fourth"
                         "fifth sixth"
                          "seven eight";
+}
+
+.factContainer h3, .moons{
+  font-family: "Secular One";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  text-align: left;
+}
+
+.answer_omkrets, .answer_max_temperatur, .answer_km, .answer_min_temp, .answer_moons {
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30.6px;
+  letter-spacing: 0.16em;
+  text-align: left;
 }
 
 .omkrets{
@@ -126,13 +177,26 @@ footer {
 }
 .answer_min_temp{
   grid-area: eight;
-
 }
 
 .info_for_text h3{
   margin-top: 1em;
 }
 
+.my_button{
+  padding: 1em 2em;
+  margin-top: 2em;
+  color: white;
+  border-radius: 0.8em;
+  background-color: #Ea4c89;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 100ms;
+}
+
+.my_button:hover{
+  background-color:#F082AC;
+}
 /* footer{
   padding-bottom: 2em;
 } */

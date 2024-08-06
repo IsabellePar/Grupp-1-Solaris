@@ -24,12 +24,20 @@ function displayPlanet() {
     kmFromSun.textContent=formatNumberWithSpaces(planetInfo.distance) + " km";
     let minTempInfo = document.querySelector(".answer_min_temp");
     minTempInfo.textContent = planetInfo.temp.night + " C";
-    let moonsCount = document.querySelector(".moons");
+    let moonsCount = document.querySelector(".answer_moons");
     let joined = planetInfo.moons.join(", ");
     moonsCount.textContent = joined;
     let circle = document.querySelectorAll(".my_aside > *");
     circle.forEach(c => {c.style.backgroundColor = planetInfo.color});
-  }
+
+    let buttonRef = document.querySelector(".my_button");
+let check = checkExistence(planetInfo.id)
+buttonRef.textContent = !check ? "Lägg till i favoriter" : "Ta bort från favoriter";
+
+    buttonRef.addEventListener("click", (event) => {
+        addOrRemoveFavorite(planetInfo, buttonRef)
+    });
+}
 
 displayPlanet();
 
@@ -38,4 +46,23 @@ displayPlanet();
 function formatNumberWithSpaces(number) {
     const formatter = new Intl.NumberFormat('sv-SE');
     return formatter.format(number);
+}
+
+//Alla: Lägger till eller tar bort en planet beroende på om den redan finns i favoritlistan och uppdaterar knapptext
+function addOrRemoveFavorite(planet, theButton){
+    let favoriteCollection = JSON.parse(localStorage.getItem("favoritedPlanets")) || [];
+    let inFavorites = favoriteCollection.includes(planet.id);
+    
+    inFavorites ? favoriteCollection.splice(favoriteCollection.indexOf(planet), 1) : favoriteCollection.push(planet.id);
+    theButton.textContent = inFavorites ? "Lägg till i favoriter" : "Ta bort från favoriter";
+    
+    return localStorage.setItem('favoritedPlanets', JSON.stringify(favoriteCollection));
+}
+
+
+//Andrej: kollar om planeten finns i favoritlistan
+function checkExistence(planet){
+    let favoriteCollection = JSON.parse(localStorage.getItem("favoritedPlanets")) || [];
+    return favoriteCollection.includes(planet);
+
 }

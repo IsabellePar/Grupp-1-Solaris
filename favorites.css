@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Isabelle: Styling av home-sidan */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    box-sizing: border-box;
+
+}
+
+h1 {
+    font-weight: 700;
+}
+
+body {
+    background: url('assets/star-transparent.png'), linear-gradient(to right, rgb(14, 14, 112), black);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.247);
+    a {
+      font-size: 25px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+}
+
+.headlines{
+    text-align: end;
+    margin-right: 2rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    gap: 1vw;
+    align-items: center;
+    padding-left: 5vw;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid white;
+    figure {
+        margin: 0 auto;
+        padding: 1rem;
+        img {
+            margin: 0 auto;
+            height: 14vh;
+            width: 14vh;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+    }
+    h2 {
+        text-align: center;
+        padding: 1rem;
+    }
+
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px 5px rgb(255, 254, 245);
+}
+footer {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.home{
+    color: grey;
+}
+
+.active, .home:hover {
+    color: white;
+  }
+
+/*   .my, .home:hover{
+    color:White
+  } */
