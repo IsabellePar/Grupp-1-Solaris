@@ -10,13 +10,26 @@
 
 body {
   background: linear-gradient(to right, rgb(16, 16, 86), rgb(21, 18, 24) );
+  /* background-image: url('https://github.com/Lexicon-Frontend-2024/exercise-js-solaris/blob/main/assets/star-transparent.png?raw=true');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
   color: white;
   height: 100vh;
 }
 
 header {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  gap: 1vw;
+  align-items: center;
+  padding-left: 5vw;
+  
+  background-color: rgba(0, 0, 0, 0.247);
+  a {
+    font-size: 25px;
+  }
 }
 
 .container{
@@ -46,51 +59,7 @@ flex-direction: column;
     &:nth-of-type(3) {height: 130vh; opacity: 10%}
   }
 }
-
-/* .my_aside {
-  margin-top: 10vw;
-  grid-column: 1;
-  z-index: 1;
-  height: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  background-color: aqua;
-  transform: translate(-50%, -50%);
-  height: 70vw;
-  width: 70vw;
-  margin-left: -25vw;
-  }
-  
-  .my_asideB {
-    margin-top: 10vw;
-    grid-column: 1;
-    z-index: 1;
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    background-color: aqua;
-    transform: translate(-50%, -50%);
-    height: 80vw;
-    width: 80vw;
-    margin-left: -65vw;
-    opacity: 10%;
-    }
-    
-    .my_asideC {
-      margin-top: 10vw;
-      grid-column: 1;
-      z-index: 1;
-      height: 100%;
-      aspect-ratio: 1 / 1;
-      border-radius: 50%;
-      background-color: aqua;
-      transform: translate(-50%, -50%);
-      height: 90vw;
-      width: 90vw;
-      margin-left: -75vw;
-      opacity: 6%;
-      } */
-      
+     
       main {
         grid-column: 2 / 4;
       }
@@ -103,3 +72,25 @@ flex-direction: column;
       footer {
         text-align: center;
       }
+
+      
+.main_single_page_section{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.text_for_planet{
+  margin-top: 1em;
+  color: yellow;
+}
+
+.info_for_text p{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.factContainer{
+  display: grid
+}
+

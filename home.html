@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -7,11 +7,18 @@
         <link rel="stylesheet" href="home.css" />
     </head>
     <body>
-        <div class="container">
-            <header>
+        <header>
+            <nav>
+                <a href="home.html">Hem</a>
+                <a href="favorites.html">Favoriter</a>
+            </nav>
+            <section class="headlines">
+
                 <h1 class="my_header">SOLSYSTEMET</h1>
                 <h2 class="my_second_header">SOLARIS</h2>
-            </header>
+            </section>
+        </header>
+        <div class="container">
             <main>
                 <span class="dot" id="0"></span>
                 <span class="dot" id="1"></span>
@@ -28,12 +35,11 @@
             <aside>
                 <section class="my_aside"></section>
             </aside>
-
-            <footer>
-                <h3 class="my_footer">Group 1</h3>
-            </footer>
-            <script src="apiKey.js"></script>
-            <script src="home.js" defer></script>
         </div>
+        <footer>
+            <h3 class="my_footer">Group 1</h3>
+        </footer>
+        <script src="apiKey.js"></script>
+        <script src="home.js" defer></script>
     </body>
 </html>
