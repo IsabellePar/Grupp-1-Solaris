@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Isabelle: Styling av home-sidan */
 * {
     margin: 0;
     box-sizing: border-box;
@@ -10,7 +9,6 @@
     font-weight: 300;
     font-style: normal;
     box-sizing: border-box;
-
 }
 
 h1 {
@@ -63,6 +61,14 @@ nav {
     padding-left: 5vw;
 }
 
+nav a:nth-child(2){
+    color: grey;
+}
+
+nav a:nth-child(2):hover{
+    color:white;
+}
+
 main {
     display: flex;
     justify-content: space-between;
@@ -72,15 +78,15 @@ main {
         aspect-ratio: 1 / 1;
         border-radius: 50%;
 
-        &:nth-of-type(1) {width: 20vw; background-color: #ffd900;}
-        &:nth-of-type(2) {width: 1vw; background-color: #808080}
-        &:nth-of-type(3) {width: 2vw; background-color: #ffc0cb}
-        &:nth-of-type(4) {width: 5vw; background-color: #418fe9}
-        &:nth-of-type(5) {width: 3vw; background-color: #f84646}
-        &:nth-of-type(6) {width: 10vw; background-color: #f4a460}
-        &:nth-of-type(7) {width: 8vw; background-color: #d4c683; position: relative}
-        &:nth-of-type(8) {width: 5vw; background-color: #add8e6}
-        &:nth-of-type(9) {width: 4vw; background-color: #89b3da}
+        &:nth-of-type(1) {width: 20vw}
+        &:nth-of-type(2) {width: 1vw}
+        &:nth-of-type(3) {width: 2vw}
+        &:nth-of-type(4) {width: 5vw}
+        &:nth-of-type(5) {width: 3vw}
+        &:nth-of-type(6) {width: 10vw}
+        &:nth-of-type(7) {width: 8vw; position: relative}
+        &:nth-of-type(8) {width: 5vw}
+        &:nth-of-type(9) {width: 4vw}
     
         .line {
             position: absolute;
@@ -93,6 +99,10 @@ main {
             transform: translate(-50%, -50%) rotate(-45deg);
             z-index: 1;
         }
+    }
+
+    .dot:hover {
+        cursor: pointer;
     }
 }
 

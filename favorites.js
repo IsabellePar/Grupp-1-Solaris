@@ -1,16 +1,16 @@
+//Alla: funktionalitet som går igenom favoritlista och sedan presenterar dem visuellt
 window.addEventListener("load", () => {
     let mainRef = document.querySelector("main");
+    
     let allFavoriteIDs = JSON.parse(localStorage.getItem("favoritedPlanets"));
     let allPlanetData = JSON.parse(localStorage.getItem("data"));
-    for(let favoriteID of allFavoriteIDs){
-        let currentPlanetData = allPlanetData[favoriteID];
-        console.log(favoriteID);
-        console.log(currentPlanetData);
-        
 
+    for (let favoriteID of allFavoriteIDs) {
+        let currentPlanetData = allPlanetData[favoriteID];
+       
         let cardElement = document.createElement("section");
         cardElement.classList.add("card");
-        
+
         let figureElement = document.createElement("figure");
         let imageElement = document.createElement("img");
         imageElement.style.backgroundColor = currentPlanetData.color;
@@ -29,36 +29,12 @@ window.addEventListener("load", () => {
             window.location.href = "singlePage.html";
             history.forward();
         });
-
     }
+});
 
-
-    
-})
-
-
+//Alla: funktion som sätter en aktiv planet som ska visas upp i singlePage
 function setActivePlanet(planetData) {
-    localStorage.setItem('activePlanet', JSON.stringify(planetData));
+    localStorage.setItem("activePlanet", JSON.stringify(planetData));
 }
 
 
-let myHeader=document.querySelector(".home");
-let buttonClass=document.querySelector(".menu");
-
-for(let i=0; i<myHeader.length;i++)
-{
-    myHeader[i].addEventListener("click", function() {
-  let current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
-}
-
-/* for(let i=0; i<myHeader.length;i++)
-    {
-        myHeader[i].addEventListener("click", function() {
-      let current = document.getElementsByClassName("my");
-      current[0].className = current[0].className.replace(" my", "");
-      this.className += " my";
-      });
-    } */

@@ -1,202 +1,226 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Secular+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Secular+One&display=swap");
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  color:white;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 body {
-  min-width: 980px;
-  background: url('assets/star-transparent.png'), linear-gradient(to right, rgb(16, 16, 86), rgb(21, 18, 24) ); 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    background: url("assets/star-transparent.png"),
+        linear-gradient(to right, rgb(16, 16, 86), rgb(21, 18, 24));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
-  height: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.247);
+    a {
+        font-size: 1.59rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+}
+
+nav {
   display: flex;
+  flex-direction: row;
+  height: 5vh;
+  gap: 1vw;
   align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  gap: 1rem;
-  z-index: 5;
   padding-left: 5vw;
-  background-color: rgba(0, 0, 0, 0.247);
-  a {
-    font-size: 25px;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-  }
+  
 }
 
-.container{
-  width: 100%;
-  /* height: 85%; */
-  grid-column: 2 / 4;
+nav a {
+  color:grey;
 }
 
-.main-content {
-  display: grid;
-  /* height: 95%; */
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  /* grid-template-columns: 1fr 1fr; */
+nav a:hover {
+  color:white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .my_aside {
-  height: 100%;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  
-  * {
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    z-index: 1;
-    left: -110vh;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
     position: fixed;
-    
-    &:nth-of-type(1) {height: 120vh; opacity: 100%}
-    &:nth-of-type(2) {height: 125vh; opacity: 10%}
-    &:nth-of-type(3) {height: 130vh; opacity: 10%}
-  }
+    left: 0;
+    top: 0;
+
+    * {
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        z-index: 1;
+        left: -110vh;
+        position: fixed;
+
+        &:nth-of-type(1) {
+            height: 120vh;
+            opacity: 100%;
+        }
+        &:nth-of-type(2) {
+            height: 125vh;
+            opacity: 10%;
+        }
+        &:nth-of-type(3) {
+            height: 130vh;
+            opacity: 10%;
+        }
+    }
 }
 
 .factContainer {
-  border-top: 1px solid #FFFFFF33;
-  border-bottom: 1px solid #FFFFFF33;
+    border-top: 1px solid #ffffff33;
+    border-bottom: 1px solid #ffffff33;
 }
 
-footer {
-  text-align: center;
-}
-
-      
-.main_single_page_section{
+.main_single_page_section {
+  grid-column: 2 / 4;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  margin: 4rem 0;
 }
 
-.text_for_planet{
+.latin_name {
   margin-top: 1em;
-  color: #FFD029;
+  color: #ffd029;
   font-family: "Lora";
-  font-size: 24px;
+  font-size: 1.5rem;
+  
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.6em;
   text-align: left;
 }
 
-.article_for_text > h2 {
+.planet_names > h2 {
   font-family: "Secular One";
-  font-size: 60px;
+  font-size: 4rem;
   font-weight: 400;
-  line-height: 60px;
-  letter-spacing: 0.09em;
-  text-align: left;
+    line-height: 60px;
+    letter-spacing: 0.09em;
+    text-align: left;
+  }
+  
+  .planet_description p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: "Roboto Condensed";
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 30.6px;
+    text-align: left;
+  }
+  
+  .factContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "first second"
+    "third fourth"
+    "fifth sixth"
+    "seven eight";
+  }
+  
+  .factContainer h3,
+  .moons {
+    font-family: "Secular One";
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.09em;
+    text-align: left;
+  }
+  
+  .answer_omkrets,
+  .answer_max_temperatur,
+  .answer_km,
+  .answer_min_temp,
+  .answer_moons {
+    font-family: "Roboto Condensed";
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 30.6px;
+    letter-spacing: 0.16em;
+    text-align: left;
+  }
+  
+  .omkrets {
+    grid-area: first;
+  }
+  .km_ {
+    grid-area: second;
+  }
+  .answer_omkrets {
+    grid-area: third;
+  }
+  .answer_km {
+    grid-area: fourth;
+  }
+  .max_temperatur {
+    grid-area: fifth;
+  }
+  .min_temp {
+    grid-area: sixth;
+  }
+  
+  .answer_max_temperatur {
+    grid-area: seven;
+    margin-bottom: 2em;
+  }
+  .answer_min_temp {
+    grid-area: eight;
+  }
+  
+  .planet_description h3 {
+    margin-top: 1em;
 }
 
-.info_for_text p{
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: "Roboto Condensed";
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 30.6px;
-  text-align: left;
-}
-
-.factContainer{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "first second"
-                        "third fourth"
-                        "fifth sixth"
-                         "seven eight";
-}
-
-.factContainer h3, .moons{
-  font-family: "Secular One";
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0.09em;
-  text-align: left;
-}
-
-.answer_omkrets, .answer_max_temperatur, .answer_km, .answer_min_temp, .answer_moons {
-  font-family: "Roboto Condensed";
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 30.6px;
-  letter-spacing: 0.16em;
-  text-align: left;
-}
-
-.omkrets{
-  grid-area: first;
-}
-.km_{
-  grid-area:second ;
-}
-.answer_omkrets{
-  grid-area: third;
-}
-.answer_km{
-  grid-area: fourth;
-}
-.max_temperatur{
-  grid-area: fifth;
-}
-.min_temp{
-  grid-area: sixth;
-}
-
-.answer_max_temperatur{
-  grid-area: seven;
-  margin-bottom: 2em;
-}
-.answer_min_temp{
-  grid-area: eight;
-}
-
-.info_for_text h3{
-  margin-top: 1em;
-}
-
-.my_button{
+.my_button {
   padding: 1em 2em;
   margin-top: 2em;
   color: white;
   border-radius: 0.8em;
-  background-color: #Ea4c89;
+  background-color: #ea4c89;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.9rem;
   transition: color 100ms;
+  max-width: 50%;
+  align-self: center;
 }
 
-.my_button:hover{
-  background-color:#F082AC;
+.my_button:hover {
+  background-color: #f082ac;
 }
-/* footer{
-  padding-bottom: 2em;
-} */
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    margin: 1rem 0;
+}
+
