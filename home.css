@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
     margin: 0;
     box-sizing: border-box;
-    
+
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -40,14 +40,14 @@ header {
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.247);
     a {
-      font-size: 25px;
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
     }
 }
 
-.headlines{
+.headlines {
     text-align: end;
     margin-right: 2rem;
 }
@@ -61,12 +61,12 @@ nav {
     padding-left: 5vw;
 }
 
-nav a:nth-child(2){
+nav a:nth-child(2) {
     color: grey;
 }
 
-nav a:nth-child(2):hover{
-    color:white;
+nav a:nth-child(2):hover {
+    color: white;
 }
 
 main {
@@ -77,17 +77,47 @@ main {
     .dot {
         aspect-ratio: 1 / 1;
         border-radius: 50%;
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0),
+            rgba(0, 0, 0, 0.699)
+        );
+        transition: transform 0.5s ease;
 
-        &:nth-of-type(1) {width: 20vw}
-        &:nth-of-type(2) {width: 1vw}
-        &:nth-of-type(3) {width: 2vw}
-        &:nth-of-type(4) {width: 5vw}
-        &:nth-of-type(5) {width: 3vw}
-        &:nth-of-type(6) {width: 10vw}
-        &:nth-of-type(7) {width: 8vw; position: relative}
-        &:nth-of-type(8) {width: 5vw}
-        &:nth-of-type(9) {width: 4vw}
-    
+        &:nth-of-type(1) {
+            width: 20vw;
+            background-image: radial-gradient(
+                circle,
+                rgba(255, 255, 255, 0.781),
+                rgba(0, 0, 0, 0.26)
+            );
+        }
+        &:nth-of-type(2) {
+            width: 1vw;
+        }
+        &:nth-of-type(3) {
+            width: 2vw;
+        }
+        &:nth-of-type(4) {
+            width: 5vw;
+        }
+        &:nth-of-type(5) {
+            width: 3vw;
+        }
+        &:nth-of-type(6) {
+            width: 10vw;
+        }
+        &:nth-of-type(7) {
+            width: 8vw;
+            position: relative;
+        }
+        &:nth-of-type(8) {
+            width: 5vw;
+        }
+        &:nth-of-type(9) {
+            width: 4vw;
+        }
+
         .line {
             position: absolute;
             top: 50%;
@@ -98,11 +128,13 @@ main {
             border-radius: 100%;
             transform: translate(-50%, -50%) rotate(-45deg);
             z-index: 1;
+            filter: drop-shadow(0 3px 3px rgb(0, 0, 0, 0.5));
         }
     }
 
     .dot:hover {
         cursor: pointer;
+        transform: scale(1.2);
     }
 }
 

@@ -7,7 +7,6 @@
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    box-sizing: border-box;
 }
 
 h1 {
@@ -76,8 +75,8 @@ main {
             margin: 0 auto;
             height: 14vh;
             width: 14vh;
-            background-color: yellow;
             border-radius: 50%;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.699));
         }
     }
     h2 {

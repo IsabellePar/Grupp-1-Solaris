@@ -1,13 +1,13 @@
 //Alla: funktionalitet som går igenom favoritlista och sedan presenterar dem visuellt
 window.addEventListener("load", () => {
     let mainRef = document.querySelector("main");
-    
+
     let allFavoriteIDs = JSON.parse(localStorage.getItem("favoritedPlanets"));
     let allPlanetData = JSON.parse(localStorage.getItem("data"));
 
     for (let favoriteID of allFavoriteIDs) {
         let currentPlanetData = allPlanetData[favoriteID];
-       
+
         let cardElement = document.createElement("section");
         cardElement.classList.add("card");
 
@@ -36,5 +36,3 @@ window.addEventListener("load", () => {
 function setActivePlanet(planetData) {
     localStorage.setItem("activePlanet", JSON.stringify(planetData));
 }
-
-
